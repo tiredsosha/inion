@@ -1,5 +1,6 @@
 import yaml
 import logging
+import time
 
 from wakeonlan import send_magic_packet
 
@@ -11,6 +12,7 @@ logging.basicConfig(
 
 
 def main():
+    time.sleep(180)
     with open('config/pc.yaml') as pc:
         pcs = yaml.safe_load(pc)
 
